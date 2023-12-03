@@ -47,6 +47,9 @@ public class ChessMatch {
             throw new ChessException("Nao Exite peca na Posicao de origem");
 
         }
+        if(!board.piece(position).IsThreAnyPossibleMove()){
+            throw new ChessException("Nao existe movimentos possiveis para a peca escolhida");
+        }
      }
 
     private void placeNewPiece(char column, int row, ChessPiece piece){
